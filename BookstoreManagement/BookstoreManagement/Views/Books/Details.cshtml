@@ -1,0 +1,32 @@
+﻿<h1>Book Details</h1>
+<form asp-action="Details" asp-controller="Books">
+    <div class="form-group">
+        <label> Book Id</label>
+        <input class="form-control" name="Id" required />
+    </div>
+    <button type="submit" class="btn btn-primary">View</button>
+</form>
+
+@if (Model != null)
+{
+    <h2>Book Details</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Title</td>
+                <td>@Model.Author</td>
+                <td>@Model.Price</td>
+                <td>@Model.Genre</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
